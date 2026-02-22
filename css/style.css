@@ -994,3 +994,51 @@ padding: 3rem 4%;
 .card-projeto:hover .imagem-projeto img {
     transform: scale(1.05);
 }
+
+/* ==================== CERTIFICAÇÕES ==================== */
+#certificacoes {
+    padding: 8rem 5%;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.03) 0%, rgba(251, 191, 36, 0.05) 100%);
+}
+
+.grade-certificacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Mensagem quando não há certificações */
+.mensagem-vazia {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(15, 23, 42, 0.4);
+    border: 2px dashed rgba(245, 158, 11, 0.3);
+    border-radius: 20px;
+}
+
+.icone-vazio {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.mensagem-vazia h3 {
+    font-size: 1.8rem;
+    color: var(--light);
+    margin-bottom: 1rem;
+}
+
+.mensagem-vazia p {
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .grade-certificacoes {
+        grid-template-columns: 1fr;
+    }
+}
