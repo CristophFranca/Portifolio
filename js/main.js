@@ -1,6 +1,6 @@
 // ============================================
 // PORTFOLIO CRISTOPHER FRANÇA - MAIN.JS
-// Sistema de interações e animações
+// Sistema de interações e animações v1.2
 // ============================================
 
 // ==================== MENU MOBILE ====================
