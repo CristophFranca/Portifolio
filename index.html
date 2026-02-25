@@ -11,7 +11,7 @@
     <meta property="og:title" content="Cristopher França - Desenvolvedor Júnior">
     <meta property="og:description" content="Portfólio profissional - Desenvolvedor Júnior e Fiscal de Caixa">
     
-    <title>Cristopher França - Desenvolvedor Júnior & Fiscal de Caixa</title>
+    <title>Cristopher França - Dev Júnior</title>
     
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -20,6 +20,7 @@
 </head>
 <body>
     <div class="fundo-animado"></div>
+
     <div class="grade-fundo"></div>
     
     <header>
@@ -32,10 +33,9 @@
             <a href="#experiencia">Experiência</a>
             <a href="#contato">Contato</a>
         </nav>
-        <button class="botao-menu-mobile" id="mobileMenuBtn" aria-label="Menu">☰</button>
+        <button class="botao-menu-mobile" id="mobileMenuBtn">☰</button>
     </header>
     
-    <div class="sobreposicao-mobile" id="mobileOverlay"></div>
     <nav class="nav-mobile" id="mobileNav">
         <a href="#sobre">Sobre</a>
         <a href="#habilidades">Habilidades</a>
@@ -44,6 +44,8 @@
         <a href="#experiencia">Experiência</a>
         <a href="#contato">Contato</a>
     </nav>
+    
+    <div class="overlay-mobile" id="mobileOverlay"></div>
     
     <section class="hero">
         <div class="conteudo-hero">
@@ -101,15 +103,53 @@
         </div>
         
         <div class="grade-certificacoes">
-            <!-- Mensagem quando não houver certificações -->
-            <div class="mensagem-vazia fade-in">
-                <div class="icone-vazio">📚</div>
-                <h3>Certificações em Breve</h3>
-                <p>Estou constantemente aprimorando minhas habilidades através de cursos e certificações. Em breve, esta seção será atualizada com minhas conquistas!</p>
+            
+            <!-- Certificado Python -->
+            <div class="card-certificacao fade-in">
+                <div class="conteudo-certificacao">
+                    <h3 class="titulo-certificacao">Python 3+ Completo</h3>
+                    <div class="instituicao-certificacao">Udemy - Prof. Luiz Otávio Miranda</div>
+                    <div class="info-certificacao">
+                        <span class="data-certificacao">📅 Fevereiro 2026</span>
+                        <span class="carga-certificacao">⏱️ 141,5h</span>
+                    </div>
+                    <div class="topicos-certificacao">
+                        <span class="topico">Python</span>
+                        <span class="topico">POO</span>
+                        <span class="topico">Django</span>
+                        <span class="topico">Selenium</span>
+                        <span class="topico">TDD</span>
+                        <span class="topico">Design Patterns</span>
+                    </div>
+                </div>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="botao-certificado">
+                    Em progresso...
+                </a>
             </div>
+            
+            <!-- Certificado Web Designer -->
+            <div class="card-certificacao fade-in">
+                <div class="conteudo-certificacao">
+                    <h3 class="titulo-certificacao">Designer Gráfico Básico (Web)</h3>
+                    <div class="instituicao-certificacao">QualificaDF - Praxis Educação</div>
+                    <div class="info-certificacao">
+                        <span class="data-certificacao">📅 Junho 2024</span>
+                        <span class="carga-certificacao">⏱️ 240h</span>
+                    </div>
+                    <div class="topicos-certificacao">
+                        <span class="topico">Web Design</span>
+                        <span class="topico">Design Gráfico</span>
+                        <span class="topico">Criação Visual</span>
+                        <span class="topico">Projetos Web</span>
+                    </div>
+                </div>
+                <a href="assets/certificates/certificado_web_designer.pdf" target="_blank" rel="noopener noreferrer" class="botao-certificado">
+                    Ver Certificado →
+                </a>
+            </div>
+            
         </div>
     </section>
-    
     <section id="habilidades">
         <div class="cabecalho-secao fade-in">
             <div class="label-secao">Tecnologias</div>
@@ -317,7 +357,7 @@
             <!-- Fiscal Remoto BigUltra - Documentação -->
             <div class="card-projeto fade-in">
                 <div class="imagem-projeto">
-                    <img src="assets/images/fiscalremoto.jpg" alt="Fiscal Remoto BigUltra" style="object-fit: cover; object-position: center;">
+                    <img src="assets/images/fiscalremoto.png" alt="Fiscal Remoto BigUltra" style="object-fit: cover; object-position: center;">
                 </div>
                 
                 <div class="conteudo-projeto">
@@ -452,10 +492,10 @@
         
         <div class="grade-contato">
             <!-- Email -->
-            <a href="mailto:contato.chriis@outlook.com" class="card-contato fade-in">
+            <a href="/cdn-cgi/l/email-protection#2d4e4243594c5942034e455f44445e6d42585941424246034e4240" class="card-contato fade-in">
                 <div class="icone-contato">📧</div>
                 <div class="label-contato">Email</div>
-                <div class="valor-contato">contato.chriis@outlook.com</div>
+                <div class="valor-contato"><span class="__cf_email__" data-cfemail="70131f1e0411041f5e131802191903301f05041c1f1f1b5e131f1d">[email&#160;protected]</span></div>
             </a>
             
             <!-- GitHub -->
