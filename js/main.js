@@ -1,7 +1,19 @@
 // ============================================
 // PORTFOLIO CRISTOPHER FRANÇA - MAIN.JS
-// Sistema de interações e animações v1.2
+// Sistema de interações e animações v1.3
 // ============================================
+
+// ==================== CONFIGURAÇÃO ====================
+// 🟢 Mude para false quando não estiver disponível para trabalho
+const DISPONIVEL_PARA_TRABALHO = true;
+
+// Controla visibilidade do badge automaticamente
+document.addEventListener('DOMContentLoaded', () => {
+    const badge = document.querySelector('.badge-disponivel');
+    if (badge) {
+        badge.style.display = DISPONIVEL_PARA_TRABALHO ? 'inline-flex' : 'none';
+    }
+});
 
 // ==================== MENU MOBILE ====================
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -99,7 +111,6 @@ const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    // Adiciona sombra no header ao rolar
     if (currentScroll > 100) {
         header.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.3)';
     } else {
@@ -109,111 +120,139 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// ==================== DIGITAÇÃO ANIMADA (OPCIONAL) ====================
-// Função para efeito de digitação no título (descomente para ativar)
-/*
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    
-    type();
-}
-
-// Ativar ao carregar a página
+// ==================== DIGITAÇÃO + APAGAR ANIMADA ====================
 window.addEventListener('load', () => {
-    const nameElement = document.querySelector('.gradient-text');
-    if (nameElement) {
-        const originalText = nameElement.textContent;
-        typeWriter(nameElement, originalText, 80);
-    }
-});
-*/
+    const nameElement = document.querySelector('.texto-gradiente');
+    if (!nameElement) return;
 
-// ==================== CURSOR PERSONALIZADO (OPCIONAL) ====================
-// Efeito de partículas ao mover o mouse (descomente para ativar)
-/*
-document.addEventListener('mousemove', (e) => {
-    const particle = document.createElement('div');
-    particle.style.cssText = `
-        position: fixed;
-        left: ${e.clientX}px;
-        top: ${e.clientY}px;
-        width: 8px;
-        height: 8px;
-        background: var(--primary);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        opacity: 0.6;
-        animation: particleFade 1s forwards;
-    `;
-    
-    document.body.appendChild(particle);
-    
-    setTimeout(() => {
-        particle.remove();
-    }, 1000);
-});
+    const nome = 'Cristopher França';
+    let charIndex = 0;
+    let isDeleting = false;
 
-// Adicionar animação CSS
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes particleFade {
-        0% {
-            transform: scale(1);
-            opacity: 0.6;
-        }
-        100% {
-            transform: scale(0);
-            opacity: 0;
+    nameElement.innerHTML = '<span class="typewriter-inner"></span><span class="cursor-digitacao">|</span>';
+    const inner = nameElement.querySelector('.typewriter-inner');
+
+    function tick() {
+        if (!isDeleting) {
+            inner.textContent = nome.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === nome.length) {
+                isDeleting = true;
+                setTimeout(tick, 7500);
+                return;
+            }
+            setTimeout(tick, 90);
+        } else {
+            inner.textContent = nome.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                isDeleting = false;
+                setTimeout(tick, 600);
+                return;
+            }
+            setTimeout(tick, 45);
         }
     }
-`;
-document.head.appendChild(style);
-*/
 
-// ==================== LOADING SCREEN (OPCIONAL) ====================
-// Tela de carregamento inicial (descomente para ativar)
-/*
-window.addEventListener('load', () => {
-    const loader = document.createElement('div');
-    loader.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--darker);
-        z-index: 99999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: opacity 0.5s;
-    `;
-    
-    loader.innerHTML = `
-        <div style="text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
-            <div style="color: var(--primary); font-size: 1.5rem; font-weight: 700;">Carregando...</div>
-        </div>
-    `;
-    
-    document.body.appendChild(loader);
-    
-    setTimeout(() => {
-        loader.style.opacity = '0';
-        setTimeout(() => loader.remove(), 500);
-    }, 1000);
+    tick();
 });
-*/
+
+// ==================== CARROSSEL DE HABILIDADES ====================
+(function() {
+    const track = document.querySelector('.carrossel-track');
+    const wrapper = document.querySelector('.carrossel-track-wrapper');
+    const dotsContainer = document.querySelector('.carrossel-dots');
+    const btnPrev = document.querySelector('.btn-prev');
+    const btnNext = document.querySelector('.btn-next');
+
+    if (!track || !wrapper) return;
+
+    const cards = Array.from(track.querySelectorAll('.card-habilidade'));
+    let currentIndex = 0;
+    let cardsVisible = 3;
+
+    function getCardsVisible() {
+        const w = window.innerWidth;
+        if (w <= 560) return 1;
+        if (w <= 900) return 2;
+        return 3;
+    }
+
+    function buildDots() {
+        dotsContainer.innerHTML = '';
+        const total = Math.ceil(cards.length / cardsVisible);
+        for (let i = 0; i < total; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('dot');
+            dot.setAttribute('aria-label', `Slide ${i + 1}`);
+            if (i === 0) dot.classList.add('ativo');
+            dot.addEventListener('click', () => goTo(i * cardsVisible));
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    function updateDots() {
+        const dotPage = Math.floor(currentIndex / cardsVisible);
+        dotsContainer.querySelectorAll('.dot').forEach((d, i) => {
+            d.classList.toggle('ativo', i === dotPage);
+        });
+    }
+
+    function updateVisibility() {
+        cards.forEach((card, i) => {
+            const visible = i >= currentIndex && i < currentIndex + cardsVisible;
+            card.classList.toggle('visivel', visible);
+        });
+    }
+
+    function goTo(index) {
+        const maxIndex = cards.length - cardsVisible;
+        currentIndex = Math.max(0, Math.min(index, maxIndex));
+        const cardWidth = cards[0].offsetWidth + 24;
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        updateDots();
+        updateVisibility();
+        btnPrev.disabled = currentIndex === 0;
+        btnNext.disabled = currentIndex >= maxIndex;
+
+        cards.forEach((card, i) => {
+            if (i >= currentIndex && i < currentIndex + cardsVisible) {
+                const bar = card.querySelector('.progresso-habilidade');
+                if (bar) {
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = bar.style.getPropertyValue('--progresso') || getComputedStyle(bar).getPropertyValue('--progresso');
+                    }, 100);
+                }
+            }
+        });
+    }
+
+    function init() {
+        cardsVisible = getCardsVisible();
+        buildDots();
+        goTo(0);
+    }
+
+    btnPrev.addEventListener('click', () => goTo(currentIndex - cardsVisible));
+    btnNext.addEventListener('click', () => goTo(currentIndex + cardsVisible));
+
+    // Suporte a swipe mobile
+    let touchStartX = 0;
+    wrapper.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+    wrapper.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) diff > 0 ? goTo(currentIndex + cardsVisible) : goTo(currentIndex - cardsVisible);
+    });
+
+    window.addEventListener('resize', () => {
+        cardsVisible = getCardsVisible();
+        buildDots();
+        goTo(0);
+    });
+
+    init();
+})();
 
 // ==================== UTILITÁRIOS ====================
 console.log('%c🚀 Portfólio Cristopher França', 'color: #f59e0b; font-size: 20px; font-weight: bold;');

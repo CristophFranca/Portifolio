@@ -6,13 +6,10 @@
     <meta name="description" content="Portfólio profissional de Cristopher França - Desenvolvedor Júnior e Fiscal de Caixa">
     <meta name="keywords" content="Cristopher França, desenvolvedor júnior, Python, JavaScript, TypeScript, portfolio">
     <meta name="author" content="Cristopher França">
-    
     <meta property="og:type" content="website">
     <meta property="og:title" content="Cristopher França - Desenvolvedor Júnior">
     <meta property="og:description" content="Portfólio profissional - Desenvolvedor Júnior e Fiscal de Caixa">
-    
     <title>Cristopher França - Dev Júnior</title>
-    
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
@@ -20,15 +17,14 @@
 </head>
 <body>
     <div class="fundo-animado"></div>
-
     <div class="grade-fundo"></div>
     
     <header>
         <div class="logo">CF</div>
         <nav>
             <a href="#sobre">Sobre</a>
-            <a href="#habilidades">Habilidades</a>
             <a href="#certificacoes">Certificações</a>
+            <a href="#habilidades">Habilidades</a>
             <a href="#projetos">Projetos</a>
             <a href="#experiencia">Experiência</a>
             <a href="#contato">Contato</a>
@@ -38,8 +34,8 @@
     
     <nav class="nav-mobile" id="mobileNav">
         <a href="#sobre">Sobre</a>
-        <a href="#habilidades">Habilidades</a>
         <a href="#certificacoes">Certificações</a>
+        <a href="#habilidades">Habilidades</a>
         <a href="#projetos">Projetos</a>
         <a href="#experiencia">Experiência</a>
         <a href="#contato">Contato</a>
@@ -47,16 +43,21 @@
     
     <div class="overlay-mobile" id="mobileOverlay"></div>
     
+    <!-- HERO -->
     <section class="hero">
         <div class="conteudo-hero">
             <div class="etiqueta-hero">✨ Desenvolvedor Júnior</div>
+            <div class="badge-disponivel">
+                <span class="pulso-disponivel"></span>
+                Disponível para novas oportunidades
+            </div>
             <h1>Olá, eu sou<br><span class="texto-gradiente">Cristopher França</span></h1>
-            <p class="descricao-hero">21 anos, desenvolvedor júnior apaixonado por tecnologia e automação. Transformando ideias em soluções práticas através do código, com foco em criar sistemas que resolvem problemas reais.</p>
+            <p class="descricao-hero">Desenvolvedor júnior apaixonado por tecnologia e automação. Transformando ideias em soluções práticas através do código, com foco em criar sistemas que resolvem problemas reais.</p>
             
             <div class="estatisticas-hero">
                 <div class="estatistica">
-                    <div class="numero-estatistica">21</div>
-                    <div class="label-estatistica">Anos de idade</div>
+                    <div class="numero-estatistica">2+</div>
+                    <div class="label-estatistica">Anos desenvolvendo</div>
                 </div>
                 <div class="estatistica">
                     <div class="numero-estatistica">3+</div>
@@ -87,14 +88,16 @@
         </div>
     </section>
     
+    <!-- SOBRE -->
     <section id="sobre">
         <div class="cabecalho-secao fade-in">
             <div class="label-secao">Conheça Mais</div>
             <h2 class="titulo-secao">Sobre Mim</h2>
-            <p class="descricao-secao">Desenvolvedor júnior em constante aprendizado, com experiência prática em Python, JavaScript e TypeScript. Atualmente trabalho como Fiscal de Caixa Remoto na rede BigBox, onde desenvolvo habilidades de gestão, análise e resolução de problemas. Paralelamente, aplico meus conhecimentos em desenvolvimento criando sistemas reais para solucionar necessidades do dia a dia.</p>
+            <p class="descricao-secao">Sou Desenvolvedor Júnior em constante aprendizado, com experiência prática em Python, JavaScript e TypeScript. Paralelamente à minha atuação como Fiscal de Caixa Remoto na rede BigBox, onde desenvolvo habilidades de gestão, análise e resolução de problemas, aplico meus conhecimentos em tecnologia criando sistemas reais para solucionar necessidades do dia a dia. <br><br> Minha trajetória combina experiência em operações administrativas e atendimento ao cliente, o que me permite unir visão prática de processos empresariais à capacidade de construir soluções digitais. Tenho facilidade em aprender novas ferramentas, iniciativa para propor melhorias e foco em resultados, sempre buscando evoluir como profissional de TI e contribuir para o crescimento das equipes e empresas.</p>
         </div>
     </section>
     
+    <!-- CERTIFICAÇÕES -->
     <section id="certificacoes">
         <div class="cabecalho-secao fade-in">
             <div class="label-secao">Aprendizado</div>
@@ -103,8 +106,6 @@
         </div>
         
         <div class="grade-certificacoes">
-            
-            <!-- Certificado Python -->
             <div class="card-certificacao fade-in">
                 <div class="conteudo-certificacao">
                     <h3 class="titulo-certificacao">Python 3+ Completo</h3>
@@ -122,34 +123,31 @@
                         <span class="topico">Design Patterns</span>
                     </div>
                 </div>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="botao-certificado">
-                    Em progresso...
-                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="botao-certificado">Em progresso...</a>
             </div>
             
-            <!-- Certificado Web Designer -->
-            <div class="card-certificacao fade-in">
+            <div class="card-certificacao card-certificacao-destaque fade-in">
                 <div class="conteudo-certificacao">
                     <h3 class="titulo-certificacao">Designer Gráfico Básico (Web)</h3>
-                    <div class="instituicao-certificacao">QualificaDF - Praxis Educação</div>
+                    <div class="instituicao-certificacao">QualificaDF — Secretaria SEDET/DF</div>
                     <div class="info-certificacao">
                         <span class="data-certificacao">📅 Junho 2024</span>
-                        <span class="carga-certificacao">⏱️ 240h</span>
+                        <span class="carga-certificacao destaque-carga">⏱️ 240 horas/aula</span>
                     </div>
                     <div class="topicos-certificacao">
                         <span class="topico">Web Design</span>
                         <span class="topico">Design Gráfico</span>
                         <span class="topico">Criação Visual</span>
                         <span class="topico">Projetos Web</span>
+                        <span class="topico">UI/UX</span>
                     </div>
                 </div>
-                <a href="assets/certificates/certificado_web_designer.pdf" target="_blank" rel="noopener noreferrer" class="botao-certificado">
-                    Ver Certificado →
-                </a>
+                <a href="assets/certificates/certificado_web_designer.pdf" target="_blank" rel="noopener noreferrer" class="botao-certificado">Ver Certificado →</a>
             </div>
-            
         </div>
     </section>
+
+    <!-- HABILIDADES -->
     <section id="habilidades">
         <div class="cabecalho-secao fade-in">
             <div class="label-secao">Tecnologias</div>
@@ -157,117 +155,69 @@
             <p class="descricao-secao">Tecnologias e ferramentas que domino ou estou aprendendo</p>
         </div>
         
-        <div class="grade-habilidades">
-            <!-- Python -->
-            <div class="card-habilidade fade-in">
-                <div class="icone-habilidade">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                </div>
-                <h3 class="nome-habilidade">Python</h3>
-                <p class="nivel-habilidade">Conhecimento Básico</p>
-                <div class="barra-habilidade">
-                    <div class="progresso-habilidade" style="--progresso: 40%"></div>
+        <div class="carrossel-habilidades">
+            <button class="btn-carrossel btn-prev" aria-label="Anterior">&#8249;</button>
+            <div class="carrossel-track-wrapper">
+                <div class="carrossel-track">
+                    <div class="card-habilidade">
+                        <div class="icone-habilidade">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        </div>
+                        <h3 class="nome-habilidade">Python</h3>
+                        <p class="nivel-habilidade">Conhecimento Básico</p>
+                        <div class="barra-habilidade">
+                            <div class="progresso-habilidade" style="--progresso: 35%"></div>
+                        </div>
+                    </div>
+                    <div class="card-habilidade">
+                        <div class="icone-habilidade icone-duplo">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                        </div>
+                        <h3 class="nome-habilidade">HTML / CSS</h3>
+                        <p class="nivel-habilidade">Conhecimento Intermediário</p>
+                        <div class="barra-habilidade">
+                            <div class="progresso-habilidade" style="--progresso: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="card-habilidade">
+                        <div class="icone-habilidade">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        </div>
+                        <h3 class="nome-habilidade">JavaScript</h3>
+                        <p class="nivel-habilidade">Conhecimento Básico</p>
+                        <div class="barra-habilidade">
+                            <div class="progresso-habilidade" style="--progresso: 35%"></div>
+                        </div>
+                    </div>
+                    <div class="card-habilidade">
+                        <div class="icone-habilidade">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        </div>
+                        <h3 class="nome-habilidade">TypeScript</h3>
+                        <p class="nivel-habilidade">Conhecimento Básico</p>
+                        <div class="barra-habilidade">
+                            <div class="progresso-habilidade" style="--progresso: 35%"></div>
+                        </div>
+                    </div>
+                    <div class="card-habilidade">
+                        <div class="icone-habilidade">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown">
+                        </div>
+                        <h3 class="nome-habilidade">Markdown</h3>
+                        <p class="nivel-habilidade">Conhecimento Intermediário</p>
+                        <div class="barra-habilidade">
+                            <div class="progresso-habilidade" style="--progresso: 70%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- TypeScript -->
-            <div class="card-habilidade fade-in">
-                <div class="icone-habilidade">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
-                </div>
-                <h3 class="nome-habilidade">TypeScript</h3>
-                <p class="nivel-habilidade">Conhecimento Básico</p>
-                <div class="barra-habilidade">
-                    <div class="progresso-habilidade" style="--progresso: 10%"></div>
-                </div>
-            </div>
-            
-            
-            <!-- Markdown -->
-            <div class="card-habilidade fade-in">
-                <div class="icone-habilidade">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="Markdown">
-                </div>
-                <h3 class="nome-habilidade">Markdown</h3>
-                <p class="nivel-habilidade">Conhecimento Intermediário</p>
-                <div class="barra-habilidade">
-                    <div class="progresso-habilidade" style="--progresso: 65%"></div>
-                </div>
-            </div>
-            
-            <!-- =================================================================
-                 ADICIONE NOVAS HABILIDADES AQUI
-                 =================================================================
-                 
-                 <div class="card-habilidade fade-in">
-                     <div class="icone-habilidade">
-                         <img src="URL_DO_ICONE" alt="Nome da Tecnologia">
-                     </div>
-                     <h3 class="nome-habilidade">Nome da Tecnologia</h3>
-                     <p class="nivel-habilidade">Nível (Básico/Intermediário/Avançado)</p>
-                     <div class="barra-habilidade">
-                         <div class="progresso-habilidade" style="--progresso: 50%"></div>
-                     </div>
-                 </div>
-                 
-                 =================================================================
-                 ÍCONES DISPONÍVEIS (https://devicon.dev/)
-                 =================================================================
-                 
-                 Frontend:
-                 • HTML5: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg
-                 • CSS3: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg
-                 • React: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg
-                 • Vue.js: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg
-                 • Angular: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg
-                 • Tailwind: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg
-                 • Bootstrap: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg
-                 • Sass: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg
-                 
-                 Backend:
-                 • Node.js: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg
-                 • Express: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg
-                 • Django: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg
-                 • Flask: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg
-                 • FastAPI: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg
-                 
-                 Banco de Dados:
-                 • MySQL: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg
-                 • PostgreSQL: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg
-                 • MongoDB: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg
-                 • Redis: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg
-                 • SQLite: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg
-                 
-                 DevOps & Ferramentas:
-                 • Git: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg
-                 • GitHub: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg
-                 • Docker: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg
-                 • Kubernetes: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg
-                 • Linux: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg
-                 • AWS: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg
-                 • Firebase: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg
-                 • Nginx: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg
-                 
-                 Editores & Design:
-                 • VS Code: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg
-                 • Figma: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg
-                 • Photoshop: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg
-                 
-                 Outras Linguagens:
-                 • C: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg
-                 • C++: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg
-                 • C#: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg
-                 • Java: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg
-                 • PHP: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg
-                 • Ruby: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg
-                 • Go: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg
-                 • Rust: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg
-                 
-                 DICA: Ajuste o valor de --progresso entre 0% e 100%
-                 ================================================================= -->
+            <button class="btn-carrossel btn-next" aria-label="Próximo">&#8250;</button>
         </div>
+        <div class="carrossel-dots"></div>
     </section>
     
+    <!-- PROJETOS -->
     <section id="projetos">
         <div class="cabecalho-secao fade-in">
             <div class="label-secao">Portfólio</div>
@@ -276,22 +226,18 @@
         </div>
         
         <div class="grade-projetos">
-            <!-- AYLA Bot - Projeto Principal -->
             <div class="card-projeto destaque fade-in">
                 <div class="badge-destaque">⭐ Projeto Principal</div>
                 <div class="imagem-projeto"><img src="assets/images/ayla.png" alt="AYLA Bot"></div>
-                
                 <div class="conteudo-projeto">
                     <h3>AYLA Bot</h3>
                     <p class="descricao-projeto">Bot Discord completo com sistema de economia, loja virtual, moderação avançada, sistema de tickets e eventos especiais. Desenvolvido com arquitetura profissional utilizando design patterns e Clean Architecture.</p>
-                    
                     <div class="tags-tecnologia">
                         <span class="tag-tech">Python</span>
                         <span class="tag-tech">Discord.py</span>
                         <span class="tag-tech">JSON Database</span>
                         <span class="tag-tech">Async/Await</span>
                     </div>
-                    
                     <div class="estatisticas-projeto">
                         <div class="estatistica-projeto">
                             <div class="valor-estatistica-projeto">10+</div>
@@ -306,33 +252,21 @@
                             <div class="label-estatistica-projeto">Status</div>
                         </div>
                     </div>
-
-                    <a href="https://github.com/CristophFranca/Ayla-BOT" target="_blank" rel="noopener noreferrer" class="botao botao-primario" style="margin-top: 1.5rem; display: inline-block;">
-                        Ver no GitHub →
-                    </a>
+                    <a href="https://github.com/CristophFranca/Ayla-BOT" target="_blank" rel="noopener noreferrer" class="botao botao-primario" style="margin-top: 1.5rem; display: inline-block;">Ver no GitHub →</a>
                 </div>
             </div>
             
-            <!-- Sistema PDV - Distribuidora -->
             <div class="card-projeto fade-in">
                 <div class="imagem-projeto"><img src="assets/images/SiXPDV.jpeg" alt="Sistema PDV Distribuidora"></div>
-                
                 <div class="conteudo-projeto">
                     <h3>Sistema PDV Distribuidora</h3>
-                    <p class="descricao-projeto">
-                        Sistema de Ponto de Venda completo desenvolvido para minha própria distribuidora de bebidas. 
-                        Gerenciamento de estoque, vendas, controle de caixa, relatórios financeiros e emissão de notas. 
-                        Solução prática aplicada em negócio real, demonstrando habilidade de transformar necessidades 
-                        comerciais em software funcional.
-                    </p>
-                    
+                    <p class="descricao-projeto">Sistema de Ponto de Venda completo desenvolvido para minha própria distribuidora de bebidas. Gerenciamento de estoque, vendas, controle de caixa, relatórios financeiros e emissão de notas. Solução prática aplicada em negócio real.</p>
                     <div class="tags-tecnologia">
                         <span class="tag-tech">Python</span>
                         <span class="tag-tech">SQLite</span>
                         <span class="tag-tech">Tkinter</span>
                         <span class="tag-tech">Gestão</span>
                     </div>
-                    
                     <div class="estatisticas-projeto">
                         <div class="estatistica-projeto">
                             <div class="valor-estatistica-projeto">Em Uso</div>
@@ -347,34 +281,26 @@
                             <div class="label-estatistica-projeto">Desenvolvimento</div>
                         </div>
                     </div>
-
-                    <a href="https://github.com/CristophFranca/SiX_PDV" target="_blank" rel="noopener noreferrer" class="botao botao-primario" style="margin-top: 1.5rem; display: inline-block;">
-                        Ver no GitHub →
-                    </a>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://cristophfranca.github.io/SiX_PDV/" target="_blank" rel="noopener noreferrer" class="botao botao-primario">🚀 Ver Demo →</a>
+                        <a href="https://github.com/CristophFranca/SiX_PDV" target="_blank" rel="noopener noreferrer" class="botao botao-secundario">Ver no GitHub</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Fiscal Remoto BigUltra - Documentação -->
             <div class="card-projeto fade-in">
                 <div class="imagem-projeto">
                     <img src="assets/images/fiscalremoto.png" alt="Fiscal Remoto BigUltra" style="object-fit: cover; object-position: center;">
                 </div>
-                
                 <div class="conteudo-projeto">
                     <h3>Fiscal Remoto BigUltra</h3>
-                    <p class="descricao-projeto">
-                        Documentação técnica completa de procedimentos e funções para fiscalização remota do BigUltrabox. 
-                        Guia detalhado com atalhos de teclado, funções operacionais, processos de trabalho e material de 
-                        referência para operadores de caixa e equipe de suporte.
-                    </p>
-                    
+                    <p class="descricao-projeto">Documentação técnica completa de procedimentos e funções para fiscalização remota do BigUltrabox. Guia detalhado com atalhos de teclado, funções operacionais, processos de trabalho e material de referência para operadores de caixa.</p>
                     <div class="tags-tecnologia">
                         <span class="tag-tech">Markdown</span>
                         <span class="tag-tech">Documentação</span>
                         <span class="tag-tech">GitHub</span>
                         <span class="tag-tech">Processos</span>
                     </div>
-                    
                     <div class="estatisticas-projeto">
                         <div class="estatistica-projeto">
                             <div class="valor-estatistica-projeto">Completo</div>
@@ -389,68 +315,26 @@
                             <div class="label-estatistica-projeto">Licença</div>
                         </div>
                     </div>
-                    
-                    <a href="https://github.com/CristophFranca/FiscalRemotoBigUltra" target="_blank" rel="noopener noreferrer" class="botao botao-primario" style="margin-top: 1.5rem; display: inline-block;">
-                        Ver no GitHub →
-                    </a>
+                    <a href="https://github.com/CristophFranca/FiscalRemotoBigUltra" target="_blank" rel="noopener noreferrer" class="botao botao-primario" style="margin-top: 1.5rem; display: inline-block;">Ver no GitHub →</a>
                 </div>
             </div>
-            
-            <!-- =================================================================
-                 ADICIONE NOVOS PROJETOS AQUI
-                 =================================================================
-                 
-                 <div class="card-projeto fade-in">
-                     <div class="imagem-projeto">
-                         <img src="assets/images/projeto.png" alt="Nome do Projeto">
-                     </div>
-                     
-                     <div class="conteudo-projeto">
-                         <h3>Nome do Projeto</h3>
-                         <p class="descricao-projeto">
-                             Descrição detalhada do que o projeto faz, 
-                             quais problemas resolve e suas principais features.
-                         </p>
-                         
-                         <div class="tags-tecnologia">
-                             <span class="tag-tech">Tecnologia 1</span>
-                             <span class="tag-tech">Tecnologia 2</span>
-                             <span class="tag-tech">Tecnologia 3</span>
-                         </div>
-                         
-                         <div class="estatisticas-projeto">
-                             <div class="estatistica-projeto">
-                                 <div class="valor-estatistica-projeto">Valor</div>
-                                 <div class="label-estatistica-projeto">Métrica</div>
-                             </div>
-                             <div class="estatistica-projeto">
-                                 <div class="valor-estatistica-projeto">Valor 2</div>
-                                 <div class="label-estatistica-projeto">Métrica 2</div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 
-                 DICA: Para projeto destaque, adicione class="destaque" e o badge
-                 ================================================================= -->
         </div>
     </section>
     
+    <!-- EXPERIÊNCIA -->
     <section id="experiencia">
         <div class="cabecalho-secao fade-in">
             <div class="label-secao">Carreira</div>
             <h2 class="titulo-secao">Experiência Profissional</h2>
         </div>
-        
         <div class="linha-tempo-experiencia">
-            <!-- Experiência Atual -->
             <div class="item-experiencia fade-in">
                 <div class="cabecalho-experiencia">
                     <div>
                         <h3 class="titulo-experiencia">Fiscal de Caixa Remoto</h3>
-                        <div class="empresa-experiencia">Rede Big & Ultrabox </div>
+                        <div class="empresa-experiencia">Rede Big & Ultrabox</div>
                     </div>
-                    <div class="data-experiencia">Atual</div>
+                    <div class="data-experiencia">Novembro 2024 - Atual</div>
                 </div>
                 <p class="descricao-experiencia">
                     Responsável pelo monitoramento remoto de operações de caixa, garantindo 
@@ -459,67 +343,56 @@
                     aos detalhes e resolução rápida de problemas em ambiente dinâmico.
                 </p>
             </div>
-            
-            <!-- =================================================================
-                 ADICIONE NOVAS EXPERIÊNCIAS AQUI
-                 =================================================================
-                 
-                 <div class="item-experiencia fade-in">
-                     <div class="cabecalho-experiencia">
-                         <div>
-                             <h3 class="titulo-experiencia">Cargo/Função</h3>
-                             <div class="empresa-experiencia">Nome da Empresa</div>
-                         </div>
-                         <div class="data-experiencia">Jan 2023 - Dez 2024</div>
-                     </div>
-                     <p class="descricao-experiencia">
-                         Descrição das suas responsabilidades, conquistas e 
-                         aprendizados durante este período.
-                     </p>
-                 </div>
-                 
-                 DICA: Coloque as experiências em ordem cronológica (mais recente primeiro)
-                 ================================================================= -->
+
+            <div class="item-experiencia fade-in">
+                <div class="cabecalho-experiencia">
+                    <div>
+                        <h3 class="titulo-experiencia">Voluntário</h3>
+                        <div class="empresa-experiencia">Anime Summit (KDM)</div>
+                    </div>
+                    <div class="data-experiencia">Outubro 2024</div>
+                </div>
+                <p class="descricao-experiencia">
+                    Responsável pelo atendimento ao público durante o evento, garantindo agilidade e precisão no registro de compras e recebimento de pagamentos. Atuação direta no suporte aos clientes, esclarecendo dúvidas, solucionando reclamações e atendendo solicitações diversas, sempre com foco na excelência do atendimento e na satisfação do público.
+                </p>
+            </div>
         </div>
     </section>
     
+    <!-- CONTATO -->
     <section id="contato">
         <div class="cabecalho-secao fade-in">
             <div class="label-secao">Conecte-se</div>
             <h2 class="titulo-secao">Entre em Contato</h2>
             <p class="descricao-secao">Vamos conversar sobre projetos, oportunidades ou tecnologia!</p>
         </div>
-        
+
         <div class="grade-contato">
-            <!-- Email -->
             <a href="mailto:contato.chriis@outlook.com" class="card-contato fade-in">
                 <div class="icone-contato">📧</div>
                 <div class="label-contato">Email</div>
                 <div class="valor-contato">contato.chriis@outlook.com</div>
             </a>
-            
-            <!-- GitHub -->
+
             <a href="https://github.com/CristophFranca" target="_blank" rel="noopener noreferrer" class="card-contato fade-in">
                 <div class="icone-contato">💻</div>
                 <div class="label-contato">GitHub</div>
                 <div class="valor-contato">@CristophFranca</div>
             </a>
-            
-            <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/cristopher-frança" target="_blank" rel="noopener noreferrer" class="card-contato fade-in">
+
+            <a href="https://linkedin.com/in/cristopher-franca" target="_blank" rel="noopener noreferrer" class="card-contato fade-in">
                 <div class="icone-contato">💼</div>
                 <div class="label-contato">LinkedIn</div>
                 <div class="valor-contato">Cristopher França</div>
             </a>
-            
         </div>
     </section>
     
     <footer>
         <p style="color: var(--gray); margin-bottom: 1rem;">Desenvolvido por Cristopher França</p>
-        <p style="color: var(--gray); font-size: 0.9rem;">© 2026 - Todos os direitos reservados</p>
+        <p style="color: var(--gray); font-size: 0.9rem;">© 2026 Cristopher França. Todos os direitos reservados.</p>
     </footer>
-    
+
     <script src="js/main.js"></script>
 </body>
 </html>
