@@ -106,33 +106,6 @@ portfolio/
 
 ---
 
-## 🚀 Como Usar
-
-### Pré-requisitos
-
-Nenhum! Site estático puro, sem dependências ou build.
-
-### Instalação Local
-
-```bash
-# Clone o repositório
-git clone https://github.com/CristophFranca/portfolio.git
-
-# Entre no diretório
-cd portfolio
-
-# Abra com um servidor local (recomendado):
-
-# Python 3
-python -m http.server 8000
-
-# VS Code — botão direito no index.html > Open with Live Server
-```
-
-Acesse em `http://localhost:8000`
-
----
-
 ## ⚙️ Personalização
 
 ### Badge de Disponibilidade
@@ -179,26 +152,6 @@ Documentação técnica completa de procedimentos de fiscalização remota de ca
 - **Tech Stack:** Markdown, GitHub
 - **Status:** Completo e em uso
 - [Ver no GitHub →](https://github.com/CristophFranca/FiscalRemotoBigUltra)
-
----
-
-## 🌐 Deploy
-
-### GitHub Pages (Recomendado)
-
-```bash
-git add .
-git commit -m "chore: update portfolio"
-git push origin main
-
-# Settings > Pages > Branch: main > Save
-# Acesse: https://cristophfranca.github.io/portfolio
-```
-
-### Outras opções gratuitas
-- **Netlify** — Deploy automático via Git
-- **Vercel** — Excelente performance
-- **Cloudflare Pages** — CDN global gratuito
 
 ---
 
